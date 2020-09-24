@@ -14,7 +14,7 @@ class CreateBuyersTable extends Migration
     public function up()
     {
         Schema::create('buyers', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unsigned()->unique();
             $table->string('Name', 20);
             $table->string('Surname', 20);
             $table->string('Patronymic', 20);
